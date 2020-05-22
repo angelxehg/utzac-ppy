@@ -10,4 +10,4 @@ suma = int(mat+fis+qui+comp+elc)
 prom = float(suma/5)
 
 # Mostrar promedio
-print("El promedio es ", prom)
+print("El promedio es:", prom)
