@@ -1,0 +1,12 @@
+print("Ingresa tus datos personales")
+nombre = input("Nombre: ")
+apellido = input("Apellido: ")
+edad = int(input("Edad: "))
+fecha = input("Fecha de nacimiento: ")
+ciudad = input("Ciudad de origen: ")
+
+print("\nDatos obtenidos:")
+print("Nombre completo:", nombre, apellido)
+print("Fecha de nacimiento:", fecha)
+print("Edad:", edad)
+print("Ciudad de origen:", ciudad)
