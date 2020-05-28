@@ -1,3 +1,5 @@
+from Paleta import Paleta
+
 # Obtener calificaciones
 mat = int(input("Introduce la calificación de Matemáticas: "))
 fis = int(input("Introduce la calificación de Física: "))
@@ -10,4 +12,4 @@ suma = int(mat+fis+qui+comp+elc)
 prom = float(suma/5)
 
 # Mostrar promedio
-print("El promedio es:", prom)
+print("El promedio es:", Paleta.VERDE, prom, Paleta.CIERRE)
