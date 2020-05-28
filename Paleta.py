@@ -12,7 +12,6 @@ class Paleta:
     CIERRE = '\33[0m'
 
     @staticmethod
-    @staticmethod
     def muestra(self):
         x = 0
         for i in range(24):
