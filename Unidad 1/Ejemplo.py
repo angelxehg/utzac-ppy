@@ -1,16 +1,11 @@
 from Paleta import Paleta
 
 # Obtener calificaciones
-mat = int(input("Introduce la calificación de" +
-                Paleta.AZUL + " Matemáticas: " + Paleta.CIERRE))
-fis = int(input("Introduce la calificación de" +
-                Paleta.AZUL + " Física: " + Paleta.CIERRE))
-qui = int(input("Introduce la calificación de" +
-                Paleta.AZUL + " Química: " + Paleta.CIERRE))
-comp = int(input("Introduce la calificación de" +
-                 Paleta.AZUL + " Computación: " + Paleta.CIERRE))
-elc = int(input("Introduce la calificación de" +
-                Paleta.AZUL + " Electricidad: " + Paleta.CIERRE))
+mat = int(input("Introduce la calificación de Matemáticas: "))
+fis = int(input("Introduce la calificación de Física: "))
+qui = int(input("Introduce la calificación de Química: "))
+comp = int(input("Introduce la calificación de Computación: "))
+elc = int(input("Introduce la calificación de Electricidad: "))
 
 # Obtener promedio
 suma = int(mat+fis+qui+comp+elc)
