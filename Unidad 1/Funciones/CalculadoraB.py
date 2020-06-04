@@ -5,18 +5,20 @@
 n1 = int(input("Ingrese primer número: "))
 n2 = int(input("Ingrese segundo número: "))
 op = input("Escoja operación + - * /: ")
-op = op[0]
 
-if op == '+':
-    r = n1 + n2
-elif op == '-':
-    r = n1 - n2
-elif op == '*':
-    r = n1 * n2
-elif op == '/':
-    r = n1 / n2
-else:
-    r = "Operador no soportado"
+
+def operacion(n1, n2, op):
+    if op[0] == '+':
+        return n1 + n2
+    elif op[0] == '-':
+        return n1 - n2
+    elif op[0] == '*':
+        return n1 * n2
+    elif op[0] == '/':
+        return n1 / n2
+    else:
+        return "Operador no soportado"
+
 
 print("Operación:", n1, op, n2)
-print("Resultado:", r)
+print("Resultado:", operacion(n1, n2, op))
