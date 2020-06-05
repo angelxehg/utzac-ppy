@@ -1,5 +1,3 @@
-from helpers.Color import Color
-
 print("Ingresa tus datos personales")
 nombre = input("Nombre: ")
 apellido = input("Apellido: ")
@@ -8,7 +6,7 @@ fecha = input("Fecha de nacimiento: ")
 ciudad = input("Ciudad de origen: ")
 
 print("\nDatos obtenidos:")
-print("Nombre completo:", Color.YELLOW, nombre, apellido, Color.DEFAULT)
-print("Fecha de nacimiento:", Color.YELLOW, fecha, Color.DEFAULT)
-print("Edad:", Color.YELLOW, edad, Color.DEFAULT)
-print("Ciudad de origen:", Color.YELLOW, ciudad, Color.DEFAULT)
+print("Nombre completo:", nombre, apellido)
+print("Fecha de nacimiento:", fecha)
+print("Edad:", edad)
+print("Ciudad de origen:", ciudad)

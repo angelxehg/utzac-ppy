@@ -1,12 +1,9 @@
-from helpers.Color import Color
-
 print("Calculadora\n")
 
-n1 = float(input(Color.DEFAULT + "Ingresa el primer número: " + Color.BLUE))
-n2 = float(input(Color.DEFAULT + "Ingresa el segundo número: " + Color.BLUE))
+n1 = float(input("Ingresa el primer número: "))
+n2 = float(input("Ingresa el segundo número: "))
 
-op = input(Color.DEFAULT +
-           "Escoge una operación: (+, -, *, /, %): " + Color.RED)
+op = input("Escoge una operación: (+, -, *, /, %): ")
 
 
 def selector(n1, n2, op):
@@ -25,6 +22,5 @@ def selector(n1, n2, op):
 
 
 r = selector(n1, n2, op[0])
-print(Color.DEFAULT + "Operación:" + Color.BLUE,
-      n1, Color.RED, op, Color.BLUE, n2)
-print(Color.DEFAULT + "Resultado:" + Color.GREEN, r, Color.DEFAULT)
+print("Operación:", n1, op, n2)
+print("Resultado:", r)
