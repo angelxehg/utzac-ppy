@@ -8,6 +8,7 @@ def crearAgenda():
             return agenda
         telefono = input("Ingrese un número de telefono:")
         agenda.update({nombre: telefono})
+        print(len(agenda), "elementos creados")
 
 
 def mostrarAgenda(agenda):
@@ -15,6 +16,7 @@ def mostrarAgenda(agenda):
     for clave in agenda.keys():
         print("\nNombre:", clave)
         print("Teléfono:", agenda[clave])
+    print(len(agenda), "elementos mostrados")
     input("Presione una tecla...")
 
 
@@ -23,6 +25,8 @@ def editarElemento(agenda):
     if clave in agenda.keys():
         tel = input("Inserte nuevo teléfono:")
         agenda[clave] = tel
+    else:
+        input("No se encontro clave...")
     return agenda
 
 
@@ -30,6 +34,8 @@ def eliminarElemento(agenda):
     clave = input("Inserte nombre a eliminar a eliminar:")
     if clave in agenda.keys():
         del agenda[clave]
+    else:
+        input("No se encontro clave...")
     return agenda
 
 
