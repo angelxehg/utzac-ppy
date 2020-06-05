@@ -1,15 +1,15 @@
-class Palette:
+class Color:
 
-    NEGRO = '\33[30m'
-    ROJO = '\33[31m'
-    VERDE = '\33[32m'
-    AMARILLO = '\33[33m'
-    AZUL = '\33[34m'
-    PURPURA = '\33[35m'
+    BLACK = '\33[30m'
+    RED = '\33[31m'
+    GREEN = '\33[32m'
+    YELLOW = '\33[33m'
+    BLUE = '\33[34m'
+    PURPLE = '\33[35m'
     BEIGE = '\33[36m'
-    BLANCO = '\33[37m'
+    WHITE = '\33[37m'
 
-    CIERRE = '\33[0m'
+    DEFAULT = '\33[0m'
 
     @staticmethod
     def example(self):
