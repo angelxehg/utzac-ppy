@@ -1,4 +1,4 @@
-class Paleta:
+class Palette:
 
     NEGRO = '\33[30m'
     ROJO = '\33[31m'
@@ -12,7 +12,7 @@ class Paleta:
     CIERRE = '\33[0m'
 
     @staticmethod
-    def muestra(self):
+    def example(self):
         x = 0
         for i in range(24):
             colors = ""

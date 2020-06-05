@@ -1,4 +1,4 @@
-from Paleta import Paleta
+from helpers.Palette import Palette
 
 # Obtener calificaciones
 mat = int(input("Introduce la calificación de Matemáticas: "))
@@ -12,11 +12,11 @@ suma = int(mat+fis+qui+comp+elc)
 prom = float(suma/5)
 
 if (prom >= 9):
-    aprobado = Paleta.VERDE
+    aprobado = Palette.VERDE
 elif (prom >= 8):
-    aprobado = Paleta.AMARILLO
+    aprobado = Palette.AMARILLO
 else:
-    aprobado = Paleta.ROJO
+    aprobado = Palette.ROJO
 
 # Mostrar promedio
-print("El promedio es:", aprobado, prom, Paleta.CIERRE)
+print("El promedio es:", aprobado, prom, Palette.CIERRE)

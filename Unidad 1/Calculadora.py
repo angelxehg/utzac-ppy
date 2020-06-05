@@ -1,12 +1,12 @@
-from Paleta import Paleta
+from helpers.Palette import Palette
 
 print("Calculadora\n")
 
-n1 = float(input(Paleta.CIERRE + "Ingresa el primer número: " + Paleta.AZUL))
-n2 = float(input(Paleta.CIERRE + "Ingresa el segundo número: " + Paleta.AZUL))
+n1 = float(input(Palette.CIERRE + "Ingresa el primer número: " + Palette.AZUL))
+n2 = float(input(Palette.CIERRE + "Ingresa el segundo número: " + Palette.AZUL))
 
-op = input(Paleta.CIERRE +
-           "Escoge una operación: (+, -, *, /, %): " + Paleta.ROJO)
+op = input(Palette.CIERRE +
+           "Escoge una operación: (+, -, *, /, %): " + Palette.ROJO)
 
 
 def selector(n1, n2, op):
@@ -25,6 +25,6 @@ def selector(n1, n2, op):
 
 
 r = selector(n1, n2, op[0])
-print(Paleta.CIERRE + "Operación:" + Paleta.AZUL,
-      n1, Paleta.ROJO, op, Paleta.AZUL, n2)
-print(Paleta.CIERRE + "Resultado:" + Paleta.VERDE, r, Paleta.CIERRE)
+print(Palette.CIERRE + "Operación:" + Palette.AZUL,
+      n1, Palette.ROJO, op, Palette.AZUL, n2)
+print(Palette.CIERRE + "Resultado:" + Palette.VERDE, r, Palette.CIERRE)

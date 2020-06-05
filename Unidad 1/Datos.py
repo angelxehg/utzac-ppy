@@ -1,4 +1,4 @@
-from Paleta import Paleta
+from helpers.Palette import Palette
 
 print("Ingresa tus datos personales")
 nombre = input("Nombre: ")
@@ -8,7 +8,7 @@ fecha = input("Fecha de nacimiento: ")
 ciudad = input("Ciudad de origen: ")
 
 print("\nDatos obtenidos:")
-print("Nombre completo:", Paleta.AMARILLO, nombre, apellido, Paleta.CIERRE)
-print("Fecha de nacimiento:", Paleta.AMARILLO, fecha, Paleta.CIERRE)
-print("Edad:", Paleta.AMARILLO, edad, Paleta.CIERRE)
-print("Ciudad de origen:", Paleta.AMARILLO, ciudad, Paleta.CIERRE)
+print("Nombre completo:", Palette.AMARILLO, nombre, apellido, Palette.CIERRE)
+print("Fecha de nacimiento:", Palette.AMARILLO, fecha, Palette.CIERRE)
+print("Edad:", Palette.AMARILLO, edad, Palette.CIERRE)
+print("Ciudad de origen:", Palette.AMARILLO, ciudad, Palette.CIERRE)
