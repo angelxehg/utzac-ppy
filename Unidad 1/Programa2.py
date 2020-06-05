@@ -15,6 +15,7 @@ def mostrarAgenda(agenda):
     for clave in agenda.keys():
         print("\nNombre:", clave)
         print("Teléfono:", agenda[clave])
+    input("Presione una tecla...")
 
 
 def editarElemento(agenda):
@@ -32,9 +33,27 @@ def eliminarElemento(agenda):
     return agenda
 
 
-agenda = crearAgenda()
-mostrarAgenda(agenda)
-agenda = editarElemento(agenda)
-mostrarAgenda(agenda)
-agenda = eliminarElemento(agenda)
-mostrarAgenda(agenda)
+agenda = {}
+
+while True:
+    print("- - - - - - - - - - -")
+    print("Menú de la agenda")
+    print("- - - - - - - - - - -")
+    print("1. Crear agenda")
+    print("2. Ver agenda")
+    print("3. Editar elemento")
+    print("4. Eliminar elemento")
+    print("- - - - - - - - - - -")
+    print("0. Salir")
+    print("- - - - - - - - - - -")
+    op = int(input("Ingrese una opción: "))
+    if op == 0:
+        break
+    elif op == 1:
+        agenda = crearAgenda()
+    elif op == 2:
+        mostrarAgenda(agenda)
+    elif op == 3:
+        agenda = editarElemento(agenda)
+    elif op == 4:
+        agenda = eliminarElemento(agenda)
