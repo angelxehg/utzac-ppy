@@ -1,2 +1,0 @@
-def funO():
-    pass

@@ -1,2 +1,0 @@
-def funS():
-    pass
