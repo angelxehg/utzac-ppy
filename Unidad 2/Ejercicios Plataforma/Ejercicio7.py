@@ -10,10 +10,8 @@ while True:
         print("\33[31mNúmero no es entero!!")
 
 formateado = ""
-reverse_len = 0 - len(entrada)
-for i in range(reverse_len, 0):
-    reverse_index = i - reverse_len
-    if reverse_index % 3 == 0 and reverse_index != 0:
+for i in range(len(entrada)):
+    if i % 3 == 0 and i != 0:
         formateado = "," + formateado
     formateado = entrada[-1 - i] + formateado
 
