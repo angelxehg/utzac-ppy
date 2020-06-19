@@ -14,6 +14,7 @@ def roll():
         print("\33[32mGanó el jugador 2\33[0m")
     else:
         print("\33[32mNo ganó nadie\33[0m")
+    input("\n\33[0mPresione una tecla para continuar...")
 
 
 def coin():
@@ -24,6 +25,7 @@ def coin():
         print("\33[32mCara!\33[0m")
     else:
         print("\33[32mCruz!\33[0m")
+    input("\n\33[0mPresione una tecla para continuar...")
 
 
 def rps():
@@ -47,6 +49,7 @@ def rps():
         print("\33[33mGana Máquina")
     else:
         print("\33[32mGana Usuario")
+    input("\n\33[0mPresione una tecla para continuar...")
 
 
 def lotto():
@@ -73,9 +76,25 @@ def lotto():
             break
     print("\33[32mHa ganado ", prize * per,
           " (acertó ", per * 100, "% al inicio\33[0m")
+    input("\n\33[0mPresione una tecla para continuar...")
 
 
-roll()
-coin()
-rps()
-lotto()
+while True:
+    print("\33[0m¿Qué juego desea jugar?")
+    print("1: Lanzar dados")
+    print("2: Lanzar moneda")
+    print("3: Piedra papel o tijera")
+    print("4: Lotería")
+    print("5: Salir")
+    op = int(input("Ingrese una opción: \33[34m"))
+    if op == 1:
+        roll()
+    elif op == 2:
+        coin()
+    elif op == 3:
+        rps()
+    elif op == 4:
+        lotto()
+    else:
+        print("\33[0mAdios!")
+        break
