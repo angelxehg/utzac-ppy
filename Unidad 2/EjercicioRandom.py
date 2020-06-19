@@ -32,19 +32,21 @@ def rps():
     op = {1: "Piedra", 2: "Papel", 3: "Tijera"}
     destroys = {1: 3, 2: 1, 3: 2}
     mach = randrange(1, 3)
-    play = int(
-        input("\33[0mEscoja un número: (1) Piedra, (2) Papel, (3) Tijera, : "))
-    if play not in range(1, 4):
-        print("\33[31mOpción invalida!!")
-    else:
-        print("\33[0mJugador:\33[34m", op[play])
-        print("\33[0mMáquina:\33[34m", op[mach])
-        if mach == play:
-            print("\33[31mNo gana nadie")
-        elif play == destroys[mach]:
-            print("\33[33mGana Máquina")
+    while True:
+        play = int(
+            input("\33[0mEscoja un número: (1) Piedra, (2) Papel, (3) Tijera, : "))
+        if play not in range(1, 4):
+            print("\33[31mOpción invalida!!")
         else:
-            print("\33[32mGana Usuario")
+            break
+    print("\33[0mJugador:\33[34m", op[play])
+    print("\33[0mMáquina:\33[34m", op[mach])
+    if mach == play:
+        print("\33[31mNo gana nadie")
+    elif play == destroys[mach]:
+        print("\33[33mGana Máquina")
+    else:
+        print("\33[32mGana Usuario")
 
 
 def lotto():
