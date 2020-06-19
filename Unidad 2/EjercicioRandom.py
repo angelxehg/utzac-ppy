@@ -19,10 +19,30 @@ def coin():
     """ Lanzar moneda """
     c = randrange(1, 2)
     if c == 1:
-        print("\33[32\Cara!\33[0m")
+        print("\33[32\\Cara!\33[0m")
     else:
-        print("\33[32\Cruz!\33[0m")
+        print("\33[32\\Cruz!\33[0m")
+
+
+def rps():
+    """ Piedra, Papel o Tijera """
+    op = {1: "Piedra", 2: "Papel", 3: "Tijera"}
+    destroys = {1: 3, 2: 1, 3: 2}
+    mach = randrange(1, 3)
+    play = int(input("Escoja un número: (1) Piedra, (2) Papel, (3) Tijera, : "))
+    if play not in range(1, 4):
+        print("Opción invalida!!")
+    else:
+        print("Jugador:", op[play])
+        print("Máquina:", op[mach])
+        if mach == play:
+            print("No gana nadie")
+        elif play == destroys[mach]:
+            print("Gana Máquina")
+        else:
+            print("Gana Usuario")
 
 
 roll()
 coin()
+rps()
