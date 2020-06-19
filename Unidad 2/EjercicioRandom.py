@@ -15,4 +15,14 @@ def roll():
         print("\33[32mNo ganó nadie\33[0m")
 
 
+def coin():
+    """ Lanzar moneda """
+    c = randrange(1, 2)
+    if c == 1:
+        print("\33[32\Cara!\33[0m")
+    else:
+        print("\33[32\Cruz!\33[0m")
+
+
 roll()
+coin()
