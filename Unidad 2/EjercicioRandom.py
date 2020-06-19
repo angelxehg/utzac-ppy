@@ -43,6 +43,32 @@ def rps():
             print("Gana Usuario")
 
 
+def lotto():
+    """ Lotería """
+    print("¡Lotería!")
+    player = []
+    while len(player) < 4:
+        nf = len(player) + 1
+        num = int(
+            input("Ingrese un número entre 1 y 9: (Recuadro " + str(nf) + ") "))
+        if num not in range(1, 10):
+            print("Número fuera de rango!")
+        else:
+            player.append(num)
+    print("Sus números son ", player)
+    mach = [randrange(1, 9) for i in range(4)]
+    print("Los números ganadores son ", mach)
+    prize = 1000000
+    per = 0.0
+    for i in range(len(player)):
+        if mach[i] == player[i]:
+            per += 0.25
+        else:
+            break
+    print("Ha ganado ", prize * per)
+
+
 roll()
 coin()
 rps()
+lotto()
