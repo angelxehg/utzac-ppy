@@ -11,7 +11,7 @@ def clear():
         _ = system('clear')
 
 
-def q_select():
+def sql_select():
     try:
         db = sqlite3.connect("db.sqlite3")
         cursor = db.cursor()
@@ -24,7 +24,7 @@ def q_select():
         print("Error:", error)
 
 
-def q_insert(comida):
+def sql_insert(comida):
     try:
         db = sqlite3.connect("db.sqlite3")
         cursor = db.cursor()
@@ -36,7 +36,7 @@ def q_insert(comida):
         print("Error:", error)
 
 
-def q_update(id, newval):
+def sql_update(id, newval):
     try:
         db = sqlite3.connect("db.sqlite3")
         cursor = db.cursor()
@@ -48,7 +48,7 @@ def q_update(id, newval):
         print("Error:", error)
 
 
-def q_delete(id):
+def sql_delete(id):
     try:
         db = sqlite3.connect("db.sqlite3")
         cursor = db.cursor()
@@ -58,40 +58,6 @@ def q_delete(id):
         print("Comida eliminada")
     except sqlite3.OperationalError as error:
         print("Error:", error)
-
-
-def list():
-    clear()
-    print("List of records:")
-    q_select()
-    input("\nPress a key to continue...")
-
-
-def create():
-    clear()
-    print("Create a record")
-    comida = input("Nueva comida: ")
-    q_insert(comida)
-    input("\nPress a key to continue...")
-
-
-def update():
-    clear()
-    print("Update a record")
-    q_select()
-    sel_id = int(input("\nID del elemento: "))
-    newval = input("Nuevo valor: ")
-    q_update(sel_id, newval)
-    input("\nPress a key to continue...")
-
-
-def remove():
-    clear()
-    print("Remove a record")
-    q_select()
-    sel_id = int(input("\nID del elemento: "))
-    q_delete(sel_id)
-    input("\nPress a key to continue...")
 
 
 while True:
@@ -108,13 +74,28 @@ Options:
 0. Exit
     """)
     op = int(input("Select an option: "))
+    clear()
     if op == 1:
-        list()
+        print("List of records:")
+        sql_select()
+        input("\nPress a key to continue...")
     elif op == 2:
-        create()
+        print("Create a record")
+        comida = input("Nueva comida: ")
+        sql_insert(comida)
+        input("\nPress a key to continue...")
     elif op == 3:
-        update()
+        print("Update a record")
+        sql_select()
+        sel_id = int(input("\nID del elemento: "))
+        newval = input("Nuevo valor: ")
+        sql_update(sel_id, newval)
+        input("\nPress a key to continue...")
     elif op == 4:
-        remove()
+        print("Remove a record")
+        sql_select()
+        sel_id = int(input("\nID del elemento: "))
+        sql_delete(sel_id)
+        input("\nPress a key to continue...")
     else:
         break
